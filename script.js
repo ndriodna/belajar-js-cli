@@ -40,9 +40,6 @@ function download() {
     // setelah itu masukan ke object hasilnya akan menjadi {key:value}
     optionObject[key] = options[1];
   }
-  console.log(
-    `Downloading from url : ${url}, metadata: ${Object(
-      JSON.stringify(optionObject)
-    )}`
-  );
+  const { format, cookies } = optionObject;
+  console.log(`Downloading from url : ${url}, metadata: ${format}, ${cookies}`);
 }
